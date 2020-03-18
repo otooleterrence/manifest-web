@@ -1,3 +1,6 @@
+# Manifest
+This is the web version of the Manifest app. manifest is a bullet journal style task manager, journaling system, event planner, and habit tracker. It's designed to mimic the style and spirit of bullet journaling but in a digital environment.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
