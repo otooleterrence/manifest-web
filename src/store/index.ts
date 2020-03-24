@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import toDoList from './slices/toDoList';
+import themes from './slices/theme';
 
 export const store = configureStore({
   reducer: {
     list: toDoList,
+    themes: themes,
   },
 });
 

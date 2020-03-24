@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import List from './containers/List';
+import MainContent from './containers/MainContent';
 import { store } from './store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <List />
+      <MainContent />
   </Provider>,
   document.getElementById('root')
 );
