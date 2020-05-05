@@ -13,15 +13,15 @@ export function Header(props: Props) {
   const dispatch = useDispatch();
 
   return (
-    <div className={props.classes.myClass}>
-      <span>{getDate()}</span>
-      <span>manifest</span>
+    <div className={props.classes.headerContainer}>
+      <span>{getDate()} :: manifest</span>
       <select
         name="theme-name"
         onChange={e => dispatch(setTheme(e.target.value))}
       >
         <option value="PURPLE">Purple</option>
         <option value="PINK">Pink</option>
+        <option value="RED">Red</option>
         <option value="WHITE">White</option>
       </select>
     </div>
