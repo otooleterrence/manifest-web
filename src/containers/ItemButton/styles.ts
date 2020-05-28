@@ -11,14 +11,14 @@ export const styles = (theme: any) => createStyles({
   },
   listItem: {
     display: 'flex',
-    // color: 'white',
+    color: 'white',
     border: '1px solid none',
     // width: '100%',
     flexGrow: 1,
     '& :hover': {
       textDecoration: 'underline',
     },
-    '& span' : {
+    '& span': {
       flexGrow: 1,
       marginLeft: '0.5rem',
       marginRight: '0.5rem',

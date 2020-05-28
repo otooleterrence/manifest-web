@@ -1,6 +1,9 @@
 import { createStyles } from '@material-ui/styles';
 
-export const styles = (theme: any) => createStyles({
+export const styles = (theme: any) => {
+  console.log(theme);
+
+  return createStyles({
   mainContainer: {
     display: 'flex',
     width: '100%',
@@ -19,4 +22,5 @@ export const styles = (theme: any) => createStyles({
       fontWeight: 'bold',
     }
   },
-});
+})
+};

@@ -12,7 +12,23 @@ interface ListState {
 }
 
 const initialState: ListState = {
-  tasks: [],
+  tasks: [
+    {
+      text: 'my first task',
+      done: false,
+      cancelled: false,
+    },
+    {
+      text: 'my done task',
+      done: true,
+      cancelled: false,
+    },
+    {
+      text: 'my cancelled task',
+      done: false,
+      cancelled: true,
+    }
+  ],
 }
 
 export const toDoSlice = createSlice({

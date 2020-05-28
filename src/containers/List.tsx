@@ -24,7 +24,7 @@ export function List(props:Props) {
     <div className= {classes.listContainer}>
       <ul className={classes.list}>
         {tasks.map((task: any, index) => (
-          <TaskItem text={task.text} done={task.done} id={index}/>
+          <TaskItem text={task.text} done={task.done} id={index} key={`item-${index}`}/>
         ))}
       </ul>
       <input
