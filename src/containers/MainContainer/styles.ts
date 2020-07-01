@@ -7,14 +7,15 @@ export const styles = (theme: any) => {
   mainContainer: {
     display: 'flex',
     width: '100%',
-    height: '100vh',
+    // height: '100vh',
     boxSizing: 'border-box',
-    // flexDirection: 'column',
+    flexDirection: 'column',
     // flexGrow: 1,
     backgroundColor: theme.backgroundColor,
     // height: '100%',
     paddingTop: '1rem',
-    paddingBottom: '1rem',
+    position: 'relative',
+    // paddingBottom: '1rem',
     // marginBottom: '1rem',
     // marginRight: '1rem',
     // '& button': {

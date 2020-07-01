@@ -5,7 +5,7 @@ import { selectTheme } from '../../store/slices/theme';
 import { useManifestTheme } from '../../theme';
 import MainContainer from '../MainContainer';
 import Header from '../Header';
-import List from '../List';
+import List from '../List/';
 import { styles } from './styles';
 
 interface Props {

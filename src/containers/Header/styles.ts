@@ -6,8 +6,10 @@ export const styles = (theme: any) => createStyles({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '2rem',
-    color: theme.backgroundColor,
-    marginLeft: '1rem',
-    marginRight: '1rem',
+    color: theme.highlight,
+    margin: '1rem',
+    // marginRight: '1rem',
+    position: 'fixed',
+    top: 0,
   },
 });
