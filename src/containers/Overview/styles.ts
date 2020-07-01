@@ -6,8 +6,10 @@ export const styles = (theme: any) => createStyles({
     height: '100%',
     marginLeft: '1rem',
     marginBottom: '1rem',
-    marginRight: '1rem',
-    borderRadius: '3px',
+    // marginRight: '1rem',
+    borderRadius: '5px',
+    width: '20rem',
+    border: `1px solid ${theme.seafoam}`,
   },
   listItem: {
     display: 'flex',
@@ -18,11 +20,11 @@ export const styles = (theme: any) => createStyles({
     margin: '2px',
     '& :hover': {
       // textDecoration: 'underline',
-      '& span' : {
+      '& span': {
         // borderBottom: '1px solid lightpink',
       }
     },
-    '& span' : {
+    '& span': {
       flexGrow: 1,
       marginLeft: '0.5rem',
       marginRight: '0.5rem',

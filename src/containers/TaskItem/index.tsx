@@ -22,21 +22,32 @@ export function TaskItem(props: Props) {
   const dispatch = useDispatch();
 
   const [newTask, setNewTask] = useState('');
+  const [showButtons, setShowButtons] = useState(false);
 
   return (
-    <li className={classes.listItem}>
+    <li
+      className={classes.listItem}
+      onMouseEnter={() => setShowButtons(true)}
+      onMouseLeave={() => setShowButtons(false)}
+      onFocus={() => setShowButtons(true)}
+      onBlur={() => setShowButtons(false)}
+      // tabIndex={0}
+    >
       <div className={classes.itemContainer}>
-        <button
-          onClick={() => {
+        <ItemButton
+          onButtonClick={() => {
             dispatch(finishTask(id));
           }}
-        >•</button>
+        >•</ItemButton>
         <span>{done && '~~'}
         {text}
         {done && '~~'}
         </span>
-        <ItemButton onButtonClick={() => dispatch(cancelTask(id))}>edit</ItemButton>
-        <ItemButton onButtonClick={() => dispatch(cancelTask(id))}>cancel</ItemButton>
+        {showButtons && (
+          <>
+            <ItemButton onButtonClick={() => dispatch(cancelTask(id))}>edit</ItemButton>
+            <ItemButton onButtonClick={() => dispatch(cancelTask(id))}>cancel</ItemButton>
+        </>)}
         {/* <button
           onClick={() => {
             dispatch(cancelTask(id));

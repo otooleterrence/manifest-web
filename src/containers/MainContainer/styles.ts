@@ -8,19 +8,21 @@ export const styles = (theme: any) => {
     display: 'flex',
     width: '100%',
     height: '100vh',
-    flexDirection: 'column',
-    flexGrow: 1,
-    backgroundColor: 'white',
+    boxSizing: 'border-box',
+    // flexDirection: 'column',
+    // flexGrow: 1,
+    backgroundColor: theme.backgroundColor,
     // height: '100%',
-    // marginLeft: '1rem',
+    paddingTop: '1rem',
+    paddingBottom: '1rem',
     // marginBottom: '1rem',
     // marginRight: '1rem',
-    '& button': {
-      background: 'transparent',
-      border: 'none',
-      color: theme.secondaryText,
-      fontWeight: 'bold',
-    }
+    // '& button': {
+    //   background: 'transparent',
+    //   border: 'none',
+    //   color: theme.secondaryText,
+    //   fontWeight: 'bold',
+    // }
   },
 })
 };

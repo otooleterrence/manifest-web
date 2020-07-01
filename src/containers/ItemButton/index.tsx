@@ -25,6 +25,7 @@ export function TaskItem(props: Props) {
 
   return (
     <button
+      className={classes.buttons}
       onClick={() => {
         onButtonClick();
       }}

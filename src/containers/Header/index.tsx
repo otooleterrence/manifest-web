@@ -19,7 +19,7 @@ export function Header(props: Props) {
         name="theme-name"
         onChange={e => dispatch(setTheme(e.target.value))}
       >
-        <option value="PURPLE">Purple</option>
+        <option value="NORMAL">normal</option>
         <option value="PINK">Pink</option>
         <option value="RED">Red</option>
         <option value="WHITE">White</option>

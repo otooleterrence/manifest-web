@@ -8,7 +8,7 @@ export const styles = (theme: any) => createStyles({
     marginBottom: '1rem',
     marginRight: '1rem',
     borderRadius: '3px',
-    width: '33.33%',
+    width: '30%',
   },
   list: {
     listStyleType: 'none',
