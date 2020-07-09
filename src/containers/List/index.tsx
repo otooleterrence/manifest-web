@@ -4,12 +4,9 @@ import { withStyles } from '@material-ui/styles';
 import {
   selectTasks,
   addTask,
-  finishTask,
-  cancelTask,
 } from '../../store/slices/toDoList';
 import TaskItem from '../TaskItem';
 import { styles } from './styles';
-// import classes from '*.module.css';
 
 interface Props {
   classes: any,

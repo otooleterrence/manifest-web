@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { withStyles } from '@material-ui/styles';
 import ItemButton from '../ItemButton';
 import {
-  selectTasks,
-  addTask,
   finishTask,
   cancelTask,
 } from '../../store/slices/toDoList';
@@ -21,7 +19,6 @@ export function TaskItem(props: Props) {
   const {classes, done, text, id } = props;
   const dispatch = useDispatch();
 
-  const [newTask, setNewTask] = useState('');
   const [showButtons, setShowButtons] = useState(false);
 
   return (
