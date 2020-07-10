@@ -10,7 +10,7 @@ interface Props {
 export function Header(props: Props) {
   return (
     <header className={props.classes.headerContainer}>
-      <h2>{getDate()}</h2>
+      <span className={props.classes.header}>{getDate()}</span>
     </header>
   );
 };

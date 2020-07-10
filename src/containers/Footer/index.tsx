@@ -9,7 +9,8 @@ interface Props {
 export function Footer(props: Props) {
   return (
     <footer className={props.classes.footer}>
-      <h2>manifest</h2>
+      <br />
+      <strong>manifest</strong>
       <span>Est. 2020</span>
       <br />
     </footer>

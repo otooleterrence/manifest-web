@@ -19,21 +19,44 @@ export function List(props: Props) {
   const [newTask, setNewTask] = useState('');
   return (
     <div className={classes.listContainer}>
-      <ul className={classes.list}>
-        {tasks.map((task: any, index) => (
-          <TaskItem text={task.text} done={task.done} id={index} key={`item-${index}`} />
-        ))}
-      </ul>
-      <input
-        value={newTask}
-        onChange={e => setNewTask(e.target.value)}
-      />
-      <button
-        onClick={() => {
-          dispatch(addTask(newTask));
-          setNewTask('');
-        }}
-      >Add Task</button>
+      <div className={classes.lists}>
+        <div className={classes.list}>
+          <h2>events</h2>
+          <ul>
+            {tasks.map((task: any, index) => (
+              <TaskItem text={task.text} done={task.done} id={index} key={`item-${index}`} />
+            ))}
+          </ul>
+        </div>
+        <div className={classes.list}>
+          <h2>tasks</h2>
+          <ul>
+            {tasks.map((task: any, index) => (
+              <TaskItem text={task.text} done={task.done} id={index} key={`item-${index}`} />
+            ))}
+          </ul>
+        </div>
+        <div className={classes.list}>
+          <h2>notes</h2>
+          <ul>
+            {tasks.map((task: any, index) => (
+              <TaskItem text={task.text} done={task.done} id={index} key={`item-${index}`} />
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div>
+        <input
+          value={newTask}
+          onChange={e => setNewTask(e.target.value)}
+        />
+        <button
+          onClick={() => {
+            dispatch(addTask(newTask));
+            setNewTask('');
+          }}
+        >Add Task</button>
+      </div>
     </div>
   )
 }

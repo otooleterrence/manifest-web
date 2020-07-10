@@ -5,11 +5,15 @@ export const styles = (theme: any) => createStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: '2rem',
+    // height: '3rem',
     color: theme.highlight,
-    margin: '1rem',
-    // marginRight: '1rem',
+    padding: '1rem',
     position: 'fixed',
     top: 0,
+    width: '100%',
+  },
+  header: {
+    fontSize: '3rem',
+    fontWeight: 800,
   },
 });

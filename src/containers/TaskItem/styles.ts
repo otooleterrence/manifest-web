@@ -33,7 +33,6 @@ export const styles = (theme: any) => createStyles({
     alignContent: 'center',
     height: '2rem',
     lineHeight: '2rem',
-    marginLeft: '1rem',
     width: '100%',
   },
 });
