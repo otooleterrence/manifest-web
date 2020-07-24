@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { withStyles } from '@material-ui/styles';
-import ItemButton from '../ItemButton';
+import ItemButton from '../../components/ItemButton';
 import {
   finishTask,
   cancelTask,
-} from '../../store/slices/toDoList';
+} from '../../store/slices/notes';
 import { styles } from './styles';
 
 interface Props {
-  classes: any,
+  classes: {
+    [propName: string]: string;
+  },
   done: boolean,
   text: string,
   id: number,
@@ -28,7 +30,6 @@ export function TaskItem(props: Props) {
       onMouseLeave={() => setShowButtons(false)}
       onFocus={() => setShowButtons(true)}
       onBlur={() => setShowButtons(false)}
-      // tabIndex={0}
     >
       <div className={classes.itemContainer}>
         <ItemButton

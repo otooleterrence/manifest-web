@@ -7,7 +7,9 @@ import MainContainer from '../MainContainer';
 import { styles } from './styles';
 
 interface Props {
-  classes: any,
+  classes: {
+    [propName: string]: string;
+  },
 }
 
 export function MainContent(props: Props) {

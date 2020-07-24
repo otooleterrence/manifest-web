@@ -1,37 +1,32 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../index';
 
-interface Task {
+export interface Event {
   text: string;
   done: boolean;
   cancelled: boolean;
 }
 
-interface ListState {
-  tasks: Task[];
+interface EventsState {
+  events: Event[];
 }
 
-const initialState: ListState = {
-  tasks: [
+const initialState: EventsState = {
+  events: [
     {
-      text: 'my first task',
+      text: 'my first event',
       done: false,
       cancelled: false,
     },
     {
-      text: 'my done task',
+      text: 'my done event',
       done: true,
       cancelled: false,
     },
-    {
-      text: 'my cancelled task',
-      done: false,
-      cancelled: true,
-    }
   ],
 }
 
-export const toDoSlice = createSlice({
+export const events = createSlice({
   name: 'toDoList',
   initialState,
   reducers: {
@@ -41,13 +36,13 @@ export const toDoSlice = createSlice({
         done: false,
         cancelled: false,
       }
-      state.tasks.push(task);
+      state.events.push(task);
     },
     finishTask: (state, action: PayloadAction<number>) => {
-      state.tasks[action.payload].done = true;
+      state.events[action.payload].done = true;
     },
     cancelTask: (state, action: PayloadAction<number>) => {
-      state.tasks.splice(action.payload, 1);
+      state.events.splice(action.payload, 1);
     },
   },
 });
@@ -59,12 +54,12 @@ export const {
   addTask,
   finishTask,
   cancelTask,
-} = toDoSlice.actions;
+} = events.actions;
 
 /**
  * Selectors for this slice
  */
-export const selectTasks = (state: RootState) =>
-  state.list.tasks;
+export const selectEvents = (state: RootState) : Event[] =>
+  state.events.events || [];
 
-export default toDoSlice.reducer;
+export default events.reducer;

@@ -1,27 +1,47 @@
 import { createStyles } from '@material-ui/styles';
 
 export const styles = (theme: any) => createStyles({
-  listContainer: {
-    color: 'white',
+  noteTakerContainer: {
+    color: theme.seafoam,
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'flex-start ',
     flexDirection:'column',
     backgroundColor: theme.backgroundColor,
-    minHeight: '100vh',
+    // minHeight: '100vh',
+    paddingTop: '1rem',
     paddingLeft: '1rem',
     paddingBottom: '4rem',
     paddingRight: '1rem',
     borderRadius: '3px',
     boxSizing: 'border-box',
+    height:  '50vh',
     // width: '30%',/
   },
+  notesContainer: {
+    margin: '0rem 5rem',
+    display: 'flex',
+    flexGrow: 1,
+    "& p": {
+      height: '1rem',
+      lineHeight: '1.5rem',
+      fontWeight: 400,
+    },
+  },
+  headerContainer: {
+    width: '100%',
+  },
+  header: {
+    fontSize: '3rem',
+    fontWeight: 800,
+  },
   lists: {
-    color: 'white',
+    color: theme.seafoam,
     display: 'flex',
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    alignSelf: 'flex-start',
     flexWrap: 'wrap',
     backgroundColor: theme.backgroundColor,
     // height: '100vh',

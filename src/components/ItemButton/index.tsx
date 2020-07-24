@@ -3,9 +3,11 @@ import { withStyles } from '@material-ui/styles';
 import { styles } from './styles';
 
 interface Props {
-  classes: any,
+  classes: {
+    [propName: string]: string;
+  },
   children: any, // should be children
-  onButtonClick: any, // should be func
+  onButtonClick: () => any,
 }
 
 export function TaskItem(props: Props) {

@@ -3,7 +3,9 @@ import { withStyles } from '@material-ui/styles';
 import { styles } from './styles';
 
 interface Props {
-  classes: any,
+  classes: {
+    [propName: string]: string;
+  },
 }
 
 export function Footer(props: Props) {

@@ -4,7 +4,9 @@ import { getDate } from '../../utils/date';
 import { styles } from './styles';
 
 interface Props {
-  classes: any,
+  classes: {
+    [propName: string]: string;
+  },
 }
 
 export function Header(props: Props) {
